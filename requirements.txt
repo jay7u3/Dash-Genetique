@@ -1,0 +1,3 @@
+pygame>=2.5
+typing_extensions>=4.0
+matplotlib>=3.7

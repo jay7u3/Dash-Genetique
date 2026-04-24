@@ -1,8 +1,0 @@
--Générateur de niveau aléatoire
-    -créer différentes partie de niveau et les générés aléatoirement à la suite
-
--Giga Refactor
-
--Faire en sorte de pouvoir réexploiter les cerveaux des Bob enregistré (dans saved.txt par exemple)
-
--Faire un giga compte rendu en latex étape par étape en détaillant avec des schéma le fonctionnement de l'algorithme génétique

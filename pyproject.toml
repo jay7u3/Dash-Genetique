@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dash-genetique"
+version = "0.2.0"
+description = "IA par algorithme génétique sur un clone de Geometry Dash."
+requires-python = ">=3.10"
+readme = "README.md"
+dependencies = [
+    "pygame>=2.5",
+    "typing_extensions>=4.0",
+    "matplotlib>=3.7",
+]
+
+[project.scripts]
+dash-genetique = "dash_genetique.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["dash_genetique*"]
+exclude = ["tests*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

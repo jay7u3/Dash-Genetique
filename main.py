@@ -1,24 +1,10 @@
-import pygame
-from ressources import *
-from level import *
-from random_map import *
-from entraineur import EntraineurIA
-# Configuration de pygame
-pygame.init()  # type: ignore
-screen = pygame.display.set_mode((LARGEUR, HAUTEUR))
+"""Compat: permet de lancer ``python main.py`` comme avant.
 
+Équivalent à ``python -m dash_genetique train`` (avec les valeurs par défaut).
+Pour plus d'options: ``python -m dash_genetique --help``.
+"""
 
-# Création d'une liste d'obstacle
+from dash_genetique.cli import main
 
-def play():
-    """
-    La fonction play permet de créer le niveau et le joueur puis appelle la fonction main()
-    pour lancer le jeu.
-    """
-    # Création du niveau (LVL1)
-    E = EntraineurIA(Level.level_1, 200)
-    E.commencer()
-    pass
-
-
-play()
+if __name__ == "__main__":
+    raise SystemExit(main(["train"]))
